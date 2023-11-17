@@ -19,7 +19,7 @@ const SocialIcons = () => {
         <div className='flex gap-4 items-center justify-center'>
             {
                 social.map((icon) => (
-                    <Link className='flex items-center justify-center text-white bg-neutral-900 text-lg w-[40px] h-[40px] rounded-full hover:bg-neutral-800' target='_blank' href={icon.link}>
+                    <Link key={icon.id} className='flex items-center justify-center text-white bg-primary text-lg w-[40px] h-[40px] rounded-full hover:bg-secondary' target='_blank' href={icon.link}>
                         {icon.iconComponent}
                     </Link>
                 ))

@@ -3,15 +3,12 @@
 @tailwind utilities;
 
 p{
-    color:#868686;
+    color: theme('colors.gray.600');
     font-weight: 300;
 }
-.card-title{
-    font-weight: 400;
-    font-size: 1.3rem;
-}
+
 .card{
-    background-color: #fefefe;
+    background-color: theme('colors.slate.50');
     padding:25px;
     border-radius: 2px;
     -moz-border-radius: 2px;
@@ -21,4 +18,26 @@ p{
     -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
     -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
     -khtml-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+}
+
+.card-title{
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.sa-button{
+    background-color: theme('colors.primary');
+    color: theme('colors.white');
+    padding:0.5rem 1.5rem 0.5rem 1.5rem;
+    display: inline-block;
+    font-weight: 300;
+    font-size: 14px;
+    overflow: hidden;
+    position:relative;
+    border-radius: 2px;
+    transition: all 0.1s linear;
+}
+
+.sa-button:hover{
+    background-color: theme('colors.secondary');
 }
