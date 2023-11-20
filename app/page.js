@@ -1,10 +1,10 @@
-import Header from "./components/Homepage/Header";
-import Banner from "./components/Homepage/Banner";
-import About from "./components/Homepage/About";
-import Skills from "./components/Homepage/Skills";
-import Education from "./components/Homepage/Education";
-import Experience from "./components/Homepage/Experience";
-import Portfolio from "./components/Homepage/Portfolio";
+import Header from "./components/homepage/Header";
+import Banner from "./components/homepage/Banner";
+import About from "./components/homepage/About";
+import Skills from "./components/homepage/Skills";
+import Education from "./components/homepage/Education";
+import Experience from "./components/homepage/Experience";
+import Portfolio from "./components/homepage/Portfolio";
 
 export default function Home() {
   return (
