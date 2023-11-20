@@ -1,11 +1,12 @@
 import React from 'react';
 import { skills } from './data';
+import SectionTitle from '../../SectionTitle';
 
 const Skills = () => {
     return (
         <section className='mt-16'>
             <div className='container'>
-                <h2 className="text-center mb-5 text-3xl font-[100]">Skills</h2>
+                <SectionTitle title="Skills" />
                 <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-5'>
                     {
                         skills.map((skill) => (

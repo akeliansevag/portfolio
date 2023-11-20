@@ -1,0 +1,59 @@
+export const data = [
+    {
+        id: 1,
+        title: "Monty Mobile - Senior Web Developer",
+        location: "Beirut, Lebanon",
+        description: "Lorem Ipsum",
+        years: "June 2020 - present"
+    },
+    {
+        id: 2,
+        title: "Interesting Times - Senior Web Developer",
+        location: "Beirut, Lebanon",
+        description: "Lorem Ipsum",
+        years: "February 2020 - May 2020"
+    },
+    {
+        id: 3,
+        title: "Wink Agency - Senior Web Developer",
+        location: "Sin el Fil, Lebanon",
+        description: "Lorem Ipsum",
+        years: "February 2019 - February 2020"
+    },
+    {
+        id: 4,
+        title: "SmartDot - Senior Web Developer",
+        location: "Mtayleb, Lebanon",
+        description: "Lorem Ipsum",
+        years: "March 2016 - February 2019"
+    },
+    {
+        id: 5,
+        title: "Memac Ogilvy - Senior Web Developer",
+        location: "Horsh Tabet, Lebanon",
+        description: "Lorem Ipsum",
+        years: "March 2014 - March 2016"
+    },
+    {
+        id: 6,
+        title: "Softlink - IT/Web Developer",
+        location: "Dekwaneh, Lebanon",
+        description: "Lorem Ipsum",
+        years: "September 2012 - November 2013"
+    },
+    {
+        id: 7,
+        title: "Aghasarkissian - IT/Retail",
+        location: "Bourj Hammoud, Lebanon",
+        description: "Lorem Ipsum",
+        years: "June 2010 - February 2011"
+    },
+    {
+        id: 8,
+        title: "BHV Citymall - IT/Retail",
+        location: "Nahr el Mawt, Lebanon",
+        description: "Lorem Ipsum",
+        years: "July 2007 - February 2009"
+    },
+
+];
