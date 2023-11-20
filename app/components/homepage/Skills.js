@@ -1,3 +1,5 @@
+import React from 'react';
+import SectionTitle from '../SectionTitle';
 import { FaHtml5, FaPhp, FaWordpress } from 'react-icons/fa6';
 import { FaBootstrap, FaCode, FaCss3, FaGithub, FaLaravel, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
@@ -6,11 +8,7 @@ import { SiCakephp, SiTailwindcss } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { MdAnimation } from "react-icons/md";
 
-
-
-
-
-export const skills = [
+const skills = [
     {
         id: 1,
         icon: <FaHtml5 />,
@@ -102,3 +100,26 @@ export const skills = [
         title: 'Responsive Design'
     }
 ];
+const Skills = () => {
+    return (
+        <section className='mt-16'>
+            <div className='container'>
+                <SectionTitle title="Skills" />
+                <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-5'>
+                    {
+                        skills.map((skill) => (
+                            <div key={skill.id} className='card text-center text-xl justify-center items-center'>
+                                <div className='inline-block text-5xl mb-1'>{skill.icon}</div>
+                                <h4 className='text-lg font-[300]'>{skill.title}</h4>
+                            </div>
+                        ))
+                    }
+
+                </div>
+
+            </div>
+        </section>
+    )
+}
+
+export default Skills;

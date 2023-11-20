@@ -1,4 +1,9 @@
-export const data = [
+import React from 'react';
+import Timeline from '../Timeline';
+import { FaBriefcase } from "react-icons/fa";
+import SectionTitle from '../SectionTitle';
+
+const data = [
     {
         id: 1,
         title: "Monty Mobile - Senior Web Developer",
@@ -57,3 +62,16 @@ export const data = [
     },
 
 ];
+const Experience = () => {
+    return (
+        <section className='mt-16 mb-16'>
+            <div className='container'>
+                <SectionTitle title="Experience" />
+                <Timeline data={data} icon={<FaBriefcase />} />
+            </div>
+
+        </section >
+    )
+}
+
+export default Experience;

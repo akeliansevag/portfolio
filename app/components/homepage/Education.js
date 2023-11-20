@@ -1,4 +1,9 @@
-export const data = [
+import React from 'react';
+import Timeline from '../Timeline';
+import { FaGraduationCap } from "react-icons/fa";
+import SectionTitle from '../SectionTitle';
+
+const data = [
     {
         id: 1,
         title: "Haigazian University",
@@ -14,3 +19,16 @@ export const data = [
         years: "1992 - 2006"
     }
 ];
+
+const Education = () => {
+    return (
+        <section className='mt-16'>
+            <div className='container'>
+                <SectionTitle title="Education" />
+                <Timeline data={data} icon={<FaGraduationCap />} />
+            </div>
+        </section >
+    )
+}
+
+export default Education;
