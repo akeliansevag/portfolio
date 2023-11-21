@@ -6,7 +6,7 @@ const Banner = () => {
     return (
         <section>
             <div className='h-[35vh] bg-gray-800 overflow-hidden flex'>
-                <Image src={bannerImage} className='mix-blend-screen object-cover object-center' alt='Banner image' priority="false" />
+                <Image src={bannerImage} className='black grayscale object-cover object-center' alt='Banner image' priority="false" />
             </div>
         </section>
     )
