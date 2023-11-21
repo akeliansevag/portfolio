@@ -12,7 +12,7 @@ const Timeline = ({ data, icon }) => {
                     return (
                         <div key={item.id} className={`items-center flex flex-col-reverse sm:flex-row gap-8 ${index % 2 !== 0 ? 'sm:flex-row-reverse' : null}`} >
                             <div className='w-full'>
-                                <div className='card'>
+                                <div className='card text-center sm:text-left'>
                                     <h4>{item.title}</h4>
                                     <h5 className='rounded-md bg-gray-300 font-[300] inline-block text-sm px-2 py-1 mt-1 mb-2'>{item.location}</h5>
                                     {
