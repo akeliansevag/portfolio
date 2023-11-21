@@ -15,9 +15,14 @@ const Timeline = ({ data, icon }) => {
                                 <div className='card'>
                                     <h4>{item.title}</h4>
                                     <h5 className='rounded-md bg-gray-300 font-[300] inline-block text-sm px-2 py-1 mt-1 mb-2'>{item.location}</h5>
-                                    <p>
-                                        {item.description}
-                                    </p>
+                                    {
+                                        item.description && (
+                                            <p>
+                                                {item.description}
+                                             </p>
+                                        )
+                                    }
+                                    
                                 </div>
                             </div>
                             <div className=' hidden sm:flex bg-primary h-[22px] w-[22px] rounded-full text-white shrink-0 items-center justify-center text-sm'>
