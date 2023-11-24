@@ -29,8 +29,10 @@ const useFetch = (url) => {
                 setLoading(false);
             }
         };
+        setTimeout(async () => {
+            fetchData();
+        }, 50000)
 
-        fetchData();
     }, [url]);
     return { data, error, loading };
 };

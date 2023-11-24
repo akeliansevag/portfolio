@@ -1,1 +1,0 @@
-export const FILE_UPLOAD_URL = 'http://localhost:1337';
