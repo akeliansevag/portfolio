@@ -19,11 +19,15 @@ const Header = () => {
                         {data && (
                             <Image fill={true} loader={imageLoader} src={data.data.profile_picture.url} alt='Profile Pic' priority="false" />
                         )}
-                        {!data && <Skeleton width="333px" height="30px" />}
+                        {!data && <Skeleton className="w-full h-full" wrapper={true} />}
                     </div>
-                    {data && <h1 className='tracking-wider my-3 text-4xl font-[100]'>{data.data.name}</h1>}
 
-                    <h2 className='mb-4'>{data && data.data.title}</h2>
+                    {data && <h1 className='tracking-wider my-3 text-4xl font-[100]'>{data.data.name}</h1>}
+                    {!data && <Skeleton className='w-[80vw] md:w-[20vw] max-w-[300px] h-[20px] mt-4' wrapper={false} />}
+
+                    {data && <h2 className='mb-4'>{data.data.title}</h2>}
+                    {!data && <Skeleton className='w-[80vw] md:w-[15vw] max-w-[200px] h-[15px] mt-4 mb-4' wrapper={false} />}
+
                     <SocialIcons />
                 </div>
 

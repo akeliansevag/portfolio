@@ -15,10 +15,10 @@ const Banner = () => {
         <section>
             <div className='h-[35vh] overflow-hidden flex relative'>
                 {data && (
-                    <Image fill={true} loader={imageLoader} src={data.data.Image.url} className='black grayscale object-cover object-center' alt='Banner image' priority="false" />
+                    <Image fill loader={imageLoader} src={data.data.Image.url} className='black grayscale object-cover object-center' alt='Banner image' priority />
                 )}
 
-                {!data && <Skeleton width='100px' height='30px' />}
+                {!data && <Skeleton className="w-full h-full" wrapper={true} />}
             </div>
         </section>
     )

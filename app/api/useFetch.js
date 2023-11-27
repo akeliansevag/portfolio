@@ -31,7 +31,7 @@ const useFetch = (url) => {
         };
         setTimeout(async () => {
             fetchData();
-        }, 50000)
+        }, 1)
 
     }, [url]);
     return { data, error, loading };

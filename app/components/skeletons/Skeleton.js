@@ -1,15 +1,17 @@
 import React from 'react';
 import './Skeleton.css';
 
-const Skeleton = ({ height, width, type, wrapper }) => {
-    const wrapperClasses = 'skeleton-wrapper' + ' ' + (type ? type : '');
-    const skeletonClasses = `skeleton w-[${width}] h-[${height}]`;
+const Skeleton = ({ className, type, wrapper }) => {
+    const wrapperClasses = (wrapper ? '' : 'skeleton-wrapper-disabled') + ' ' + 'skeleton-wrapper' + ' ' + (type ? type : '');
+    const skeletonClasses = `skeleton relative ${className}`;
     return (
-        <div className={wrapperClasses}>
-            <div className={skeletonClasses}></div>
-            <div className='shimmer-wrapper'>
-                <div className='shimmer'></div>
+        <div className={`${wrapperClasses}`}>
+            <div className={skeletonClasses}>
+                <div className='shimmer-wrapper'>
+                    <div className='shimmer'></div>
+                </div>
             </div>
+
         </div>
 
     )

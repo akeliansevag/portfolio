@@ -6,6 +6,12 @@
   height: 100%;
 }
 
+.skeleton-wrapper-disabled{
+  width: auto;
+  height: auto;
+  background-color: transparent;
+}
+
 .skeleton{
   background-color: #ddd;
 }

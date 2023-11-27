@@ -1,28 +1,32 @@
+'use client';
 import React from 'react';
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
+import * as ReactIcons from "react-icons/fa";
+
 import Link from 'next/link';
+import useFetch from '../api/useFetch';
+import { SOCIAL_MEDIAS_API } from '../api/api';
+import Skeleton from './skeletons/Skeleton';
 
 const SocialIcons = () => {
-    const social = [{
-        id: 1, iconComponent: <FaFacebookF />, link: 'https://www.facebook.com/sevag.akelian'
-    }, {
-        id: 2, iconComponent: <FaInstagram />, link: 'https://www.instagram.com/akeliansevag/'
-    }, {
-        id: 3, iconComponent: <FaWhatsapp />, link: 'https://wa.me/+96170708573'
-    }, {
-        id: 4, iconComponent: <FaLinkedinIn />, link: 'https://www.linkedin.com/in/sevag-akelian/'
-    }, {
-        id: 5, iconComponent: <SiGmail />, link: 'mailto:sevag.akelian@gmail.com'
-    },];
+    const { data, loading, error } = useFetch(SOCIAL_MEDIAS_API);
     return (
         <div className='flex gap-4 items-center justify-center'>
+
+            {data && (
+                data?.data.map((icon) => {
+                    let IconComponent = ReactIcons[icon.icon];
+                    return (
+                        <Link key={icon.id} className='flex items-center justify-center text-white bg-primary text-lg w-[40px] h-[40px] rounded-full hover:bg-secondary' target='_blank' href={icon.link}>
+                            {IconComponent && <IconComponent />}
+                        </Link>
+                    )
+                })
+            )
+            }
+
             {
-                social.map((icon) => (
-                    <Link key={icon.id} className='flex items-center justify-center text-white bg-primary text-lg w-[40px] h-[40px] rounded-full hover:bg-secondary' target='_blank' href={icon.link}>
-                        {icon.iconComponent}
-                    </Link>
-                ))
+                !data &&
+                [1, 2, 3, 4, 5].map(item => <Skeleton key={item} className="h-[40px] w-[40px] rounded-full" wrapper={false} />)
             }
         </div>
     )
