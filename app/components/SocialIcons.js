@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import Link from 'next/link';
 
 const SocialIcons = () => {
     const social = [{
@@ -19,9 +18,9 @@ const SocialIcons = () => {
         <div className='flex gap-4 items-center justify-center'>
             {
                 social.map((icon) => (
-                    <Link key={icon.id} className='flex items-center justify-center text-white bg-primary text-lg w-[40px] h-[40px] rounded-full hover:bg-secondary' target='_blank' href={icon.link}>
+                    <a key={icon.id} className='flex items-center justify-center text-white bg-primary text-lg w-[40px] h-[40px] rounded-full hover:bg-secondary' target='_blank' href={icon.link}>
                         {icon.iconComponent}
-                    </Link>
+                    </a>
                 ))
             }
         </div>
