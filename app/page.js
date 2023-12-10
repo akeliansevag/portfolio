@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <main>
+      <h1>test</h1>
       <Banner />
       <Header />
       <About />
