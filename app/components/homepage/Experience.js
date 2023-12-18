@@ -43,7 +43,7 @@ const data = [
     {
         id: 7,
         title: "Aghasarkissian - IT/Retail",
-        location: "Bourj Hammoudd, Lebanon",
+        location: "Bourj Hammoud, Lebanon",
         years: "June 2010 - February 2011"
     },
     {
