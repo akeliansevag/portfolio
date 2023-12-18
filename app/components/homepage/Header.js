@@ -9,7 +9,7 @@ import Skeleton from '../skeletons/Skeleton';
 const Header = () => {
     const { data, loading, error } = useFetch(HEADER_API);
     const imageLoader = ({ src, width, quality }) => {
-        return `${BASE_URL}${src}?${width}&q=${quality || 75}`;
+        return `${src}?${width}&q=${quality || 75}`;
     }
     return (
         <section>
@@ -17,18 +17,19 @@ const Header = () => {
                 <div className='flex flex-col items-center'>
                     <div className='overflow-hidden rounded-full isolate h-[200px] w-[200px] mt-[-100px] relative'>
                         {data && (
-                            <Image fill={true} loader={imageLoader} src={data.data.profile_picture.url} alt='Profile Pic' priority="false" />
+                            <Image sizes="100%" fill={true} loader={imageLoader} src={data.acf.profile_pic} alt='Profile Pic' priority="false" />
+                            // <img src={data.acf.profile_picture} alt="Profil Picture" />
                         )}
                         {!data && <Skeleton className="w-full h-full" wrapper={true} />}
                     </div>
 
-                    {data && <h1 className='tracking-wider my-3 text-4xl font-[100]'>{data.data.name}</h1>}
+                    {data && <h1 className='tracking-wider my-3 text-4xl font-[100]'>{data.acf.full_name}</h1>}
                     {!data && <Skeleton className='w-[80vw] md:w-[20vw] max-w-[300px] h-[20px] mt-4' wrapper={false} />}
 
-                    {data && <h2 className='mb-4'>{data.data.title}</h2>}
+                    {data && <h2 className='mb-4'>{data.acf.title}</h2>}
                     {!data && <Skeleton className='w-[80vw] md:w-[15vw] max-w-[200px] h-[15px] mt-4 mb-4' wrapper={false} />}
 
-                    <SocialIcons />
+                    {/* <SocialIcons /> */}
                 </div>
 
             </div>

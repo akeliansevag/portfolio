@@ -12,12 +12,12 @@ export default function Home() {
     <main>
       <Banner />
       <Header />
-      <About />
+      {/* <About />
       <Skills />
       <Experience />
       <Education />
       <Portfolio />
-      <Footer />
+      <Footer /> */}
     </main>
   )
 }
