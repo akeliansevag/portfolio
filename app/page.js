@@ -12,8 +12,8 @@ export default function Home() {
     <main>
       <Banner />
       <Header />
-      {/* <About />
-      <Skills />
+      <About />
+      {/* <Skills />
       <Experience />
       <Education />
       <Portfolio />
