@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import * as ReactIcons from "react-icons/fa";
 
 import useFetch from '../api/useFetch';
 import { SOCIAL_MEDIAS_API } from '../api/api';
@@ -12,11 +11,10 @@ const SocialIcons = () => {
         <div className='flex gap-4 items-center justify-center'>
 
             {data && (
-                data?.data.map((icon) => {
-                    let IconComponent = ReactIcons[icon.icon];
+                data?.map((icon, index) => {
                     return (
-                        <a key={icon.id} className='flex items-center justify-center text-white bg-primary text-lg w-[40px] h-[40px] rounded-full hover:bg-secondary' target='_blank' href={icon.link}>
-                            {IconComponent && <IconComponent />}
+                        <a key={index} className='flex items-center justify-center text-white bg-primary text-lg w-[40px] h-[40px] rounded-full hover:bg-secondary' target='_blank' href={icon.link}>
+                            <span className='fill-white' dangerouslySetInnerHTML={{ __html: icon.icon }}></span>
                         </a>
                     )
                 })

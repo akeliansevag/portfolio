@@ -29,7 +29,7 @@ const Header = () => {
                     {data && <h2 className='mb-4'>{data.acf.title}</h2>}
                     {!data && <Skeleton className='w-[80vw] md:w-[15vw] max-w-[200px] h-[15px] mt-4 mb-4' wrapper={false} />}
 
-                    {/* <SocialIcons /> */}
+                    <SocialIcons />
                 </div>
 
             </div>
