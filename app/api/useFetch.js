@@ -9,10 +9,6 @@ const useFetch = (url) => {
     useEffect(() => {
         setError(null);
         setLoading(true);
-        if (isInitialMount.current) {
-            isInitialMount.current = false;
-            return;
-        }
 
         const fetchData = async () => {
             try {
