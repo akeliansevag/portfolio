@@ -16,8 +16,8 @@ const About = () => {
                             <div className='w-full lg:basis-5/12'>
                                 <ul className='flex flex-col gap-3'>
                                     {
-                                        data.data.about_items?.map((item) => (
-                                            <li key={item.id} className='flex gap-2 border-b-[1px] pb-3 last:border-b-0'>
+                                        data.acf.personal_info?.map((item, index) => (
+                                            <li key={index} className='flex gap-2 border-b-[1px] pb-3 last:border-b-0'>
                                                 <span className='basis-1/2'>
                                                     <span className='bg-primary text-white py-1 px-2 rounded-md'>{item.title}:</span>
                                                 </span>
@@ -30,11 +30,14 @@ const About = () => {
                                 </ul>
                             </div>
                             <div className='w-full lg:basis-7/12'>
-                                <h2 className='card-title mb-2'>{data.data.title}</h2>
+                                <h2 className='card-title mb-2'>{data.acf.bio_title}</h2>
                                 <p>
-                                    {data.data.description}
+                                    {data.acf.bio_description}
                                 </p>
-                                <Link className="mt-4 sa-button" href='#' target='_blank'>Download CV</Link>
+                                {data.acf?.cv && (
+                                    <Link className="mt-4 sa-button" href={data.acf.cv} target='_blank'>Download CV</Link>
+                                )}
+
                             </div>
                         </div>
                     </div>

@@ -15,14 +15,13 @@ const Skills = () => {
                 <SectionTitle title="Skills" />
                 <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-5'>
                     {data && (
-                        data.data.map((skill) => {
-                            let IconComponent = ReactIcons[skill.Icon];
+                        data.acf.skills.map((skill, index) => {
                             return (
-                                <div key={skill.id} className='card text-center text-xl justify-center items-center'>
+                                <div key={index} className='card text-center text-xl justify-center items-center'>
                                     <div className='inline-block text-5xl mb-1'>
-                                        {IconComponent && <IconComponent />}
+                                        <span className='skill' dangerouslySetInnerHTML={{ __html: skill.icon }}></span>
                                     </div>
-                                    <h4 className='text-lg font-[300]'>{skill.Name}</h4>
+                                    <h4 className='text-lg font-[300]'>{skill.name}</h4>
                                 </div>
                             )
                         })

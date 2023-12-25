@@ -34,10 +34,19 @@ p{
     font-size: 14px;
     overflow: hidden;
     position:relative;
-    border-radius: 2px;
+    border-radius: 4px;
     transition: all 0.1s linear;
 }
 
 .sa-button:hover{
     background-color: theme('colors.secondary');
+}
+
+.skill svg{
+    width: auto;
+    height: 48px;
+}
+
+.skill svg, .skill path{
+    fill: rgba(0,0,0,0.75);
 }
