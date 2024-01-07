@@ -8,8 +8,8 @@ const Portfolio = () => {
         <section className='mt-16'>
             <div className='container'>
                 <SectionTitle title="Portfolio" />
-                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-                    {items.map((item)=>(
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6'>
+                    {items.map((item) => (
                         <PortfolioCard key={item.id} item={item} />
                     ))}
                 </div>
